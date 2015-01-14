@@ -1,0 +1,5 @@
+name = High Country Brewer's Alliance Core
+description = A core module for the High Country Brewer's Alliance website
+core = 7.x
+version = 7.x-1.x
+package = HCBA

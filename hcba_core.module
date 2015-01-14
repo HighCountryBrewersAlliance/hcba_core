@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * The core module for the High Country Brewer's Alliance website.
+ */
+
+/**
+ * Implements hook_menu();
+ */
+function hcba_core_menu() {
+  $items = array();
+
+  $items['home'] = array(
+    'title' => t('Home'),
+    'page callback' => 'hcba_home',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'file' => 'hcba_core.pages.inc'
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme();
+ */
+function hcba_core_theme() {
+  $themes = array();
+
+  $themes['hcba_home'] = array(
+    'variables' => array(
+      'members' => NULL,
+    ),
+    'template' => 'templates/hcba_home',
+  );
+
+  return $themes;
+}
